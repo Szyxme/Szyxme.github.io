@@ -1,43 +1,42 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>Strona główna</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
+<html> 
+<head> 
+<title>Chyliński 1P</title> 
+<style>
+    p{
+        color: red;
+        font-size: 2cm;
     }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h2>Strona główna</h2>
-  <p>Wybierz jedno z zadań:</p>
-  
-  <button onclick="openWindow('z1_chyl.html')">zadanie1</button>
-  <button onclick="openWindow('z2_chyl.html')">zadanie2</button>
-  <button onclick="openWindow('z3_chyl.html')">zadanie3</button>
-  <button onclick="openWindow('z4_chyl.html')">zadanie4</button>
-  <button onclick="openWindow('z5_chyl.html')">zadanie5</button>
-  <br>
-  <button onclick="closeWindow()">zamknij okno</button>
-
-  <script>
-    function openWindow(page) {
-      window.open(page, "_blank", "width=600,height=400");
-    }
-
-    function closeWindow() {
-      window.open('', '_self'); 
-      window.close();         
-    }
-  </script>
-</body>
-</html>
+</style>
+<script language="JavaScript"> 
+    function WinOpen_z1_chyl(){ 
+        window.open("z1_chyl.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=200,width=300,top=200,left=200"); 
+        } 
+    function WinOpen_z2_chyl(){ 
+        window.open("z2_chyl.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=200,width=450,top=200,left=200"); 
+        } 
+    function WinOpen_z3_chyl(){ 
+        window.open("z3_chyl.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
+        } 
+    function WinOpen_z4_chyl(){ 
+        window.open("z4_chyl.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=700,width=850,top=200,left=400"); 
+        } 
+    function WinOpen_z5_chyl(){ 
+        window.open("z5_chyl.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=530,width=1200,top=900,left=700"); 
+        } 
+    function okno_zamknij_chylinski(){ 
+        window.close();
+    } 
+</script> 
+</head> 
+<body> 
+    <p>Szkielet zaliczeniowy JavaScript Szymon Chyliński klasa 2P</p>
+    <form> 
+        <input type="button" name="zadanie1" value="zadanie1-chylinski" onclick="WinOpen_z1_klei(' ')"> 
+        <input type="button" name="zadanie2" value="zadanie2-chylinski" onclick="WinOpen_z2_klei(' ')"> 
+        <input type="button" name="zadanie3" value="zadanie3-chylinski" onclick="WinOpen_z3_klei(' ')"> 
+        <input type="button" name="zadanie4" value="zadanie4-chylinski" onclick="WinOpen_z4_klei(' ')">
+        <input type="button" name="zadanie5" value="zadanie5-chylinski" onclick="WinOpen_z5_chyl(' ')">  
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_chylinski()"/> 
+    </form> 
+</body> 
+</html> 
