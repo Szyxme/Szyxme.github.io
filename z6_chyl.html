@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 6 - Nazwisko</title>
+</head>
+<body>
+  <h2>Zadanie 6 - Teoria</h2>
+
+  <p><b>1) Rodzaje okienek</b></p>
+  <p>
+    W JavaScript mamy trzy podstawowe rodzaje okienek:<br>
+    • <u><b>alert</b></u> – wyświetla komunikat z przyciskiem OK,<br>
+    • <u><b>prompt</b></u> – umożliwia wpisanie danych przez użytkownika,<br>
+    • <u><b>confirm</b></u> – pozwala użytkownikowi coś potwierdzić lub anulować.
+  </p>
+
+  <p><b>2) Konwersji liczb</b></p>
+  <p>
+    Wartości wpisane w okienku <u><b>prompt</b></u> są traktowane jako tekst, dlatego musimy je 
+    przekonwertować na liczby. Służą do tego m.in.:
+    <br>• <b>parseInt(zmienna)</b> – konwersja do liczby całkowitej,<br>
+    • <b>parseFloat(zmienna)</b> – konwersja do liczby zmiennoprzecinkowej,<br>
+    • <b>toString(zmienna)</b> – konwersja do łańcucha znaków.
+  </p>
+
+  <button onclick="pokazOkienko()">Kliknij mnie</button>
+
+  <script>
+    function pokazOkienko(){
+      let a = prompt("Podaj pierwszą liczbę:");
+      let b = prompt("Podaj drugą liczbę:");
+
+      let suma = parseInt(a) + parseInt(b);
+
+      alert("Suma podanych liczb to: " + suma);
+    }
+  </script>
+</body>
+</html>
