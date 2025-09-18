@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 11 Chyliński</title>
+<script type="text/javascript">
+function oblicz_chy() {
+    let D1 = parseInt(document.getElementById("D1_chy").value);
+    let D2 = parseInt(document.getElementById("D2_chy").value);
+
+    let roznica_dni = Math.abs(D1 - D2);
+    let sekundy = roznica_dni * 24 * 60 * 60;
+
+    document.getElementById("wynik").innerHTML =
+        "Między dniem " + D1 + " a dniem " + D2 +
+        " minęło " + sekundy + " sekund.";
+}
+
+function okno_zamknij_chy() {
+    window.close()
+}
+</script>
+</head>
+<body>
+<h2>Zadanie 11 – Chyliński</h2>
+
+<form>
+Podaj pierwszy dzień (D1): 
+<input type="number" id="D1_chy"><br><br>
+Podaj drugi dzień (D2): 
+<input type="number" id="D2_chy"><br><br>
+
+<input type="button" value="Oblicz sekundy" onclick="oblicz_chy()">
+</form>
+
+<p id="wynik" style="color:green; font-size:45px;"></p>
+
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_chy()"/>
+
+</body>
+</html>
