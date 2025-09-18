@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="color:green; font-size:50px;">
+      <script>
+        var m_chy = prompt("m = ", "");
+        m_chy = parseInt(m_chy);
+        
+        if (!isNaN(m_chy) && m_chy !== 0) {
+          var a_chy = m_chy + 1;
+          var b_chy = m_chy * (m_chy + 1);
+          var c_chy = m_chy * (m_chy + 1) * (m_chy + 1);
+          document.write("1/" + m_chy + " = 1/" + a_chy + " + 1/" + b_chy + " + 1/" + c_chy);
+        } else {
+          document.write("Podano niepoprawną liczbę.");
+        }
+      </script>
+    </div>
+  </body>
+</html>
