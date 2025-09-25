@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Zadanie 13 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 13 kod: </h1>
+        <textarea readonly rows="27" cols="85"><!DOCTYPE html>
+<head>
+    <title>Zadanie 13</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color: green; font-size: 38px;"> 
+        <script language="JavaScript"> 
+            var m_chy = parseInt(prompt("Podaj m: ", "Wpisz tutaj"));
+            document.write("1/"+m_chy+" = 1/"+(m_chy+1)+" + "+"1/"+(m_chy*(m_chy+1))+"<br>");
+            
+            lewa = 1 / m_chy;
+            prawa = 1 / (m_chy + 1) + 1 / (m_chy * (m_chy + 1));
+
+            document.write("Lewa strona = " + lewa + "<br>");
+            document.write("Prawa strona = " + prawa + "<br>");
+
+            if (Math.abs(lewa - prawa) < 0.1) {
+                document.write("Zgadza się");
+            } else {
+                document.write("Coś się nie zgadza");
+            }
+        </script>
+    </div>
+</body>
+</html></textarea>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Zadanie 15 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 15 kod: </h1>
+        <textarea readonly rows="24" cols="85"><!DOCTYPE html>
+<head>
+    <title>Zadanie 15</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color: green; font-size: 38px;"> 
+        <script language="JavaScript"> 
+            var m_chy = parseInt(prompt("Wpisz m: ", "Wpisz tutaj"));
+            document.write("1/"+m_chy+" = "+ "1/"+2*m_chy+" + 1/"+2*m_chy+"<br>");
+
+            var lewa = 1/m_chy;
+            var prawa = 1/(2*m_chy) + 1/(2*m_chy);
+
+            if(lewa - prawa < 0.1){
+                document.writeln("Zgadza się");
+            }
+            else{
+                document.writeln("Nie zgadza się");
+            }
+        </script>
+    </div>
+</body>
+</html></textarea>
+        </center>
+    </body>
+</html>
