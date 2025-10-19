@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20</title>
+</head>
+<body>
+<p>Podaj x punktu A: <input type="text" id="x1"></p>
+<p>Podaj y punktu A: <input type="text" id="y1"></p>
+<p>Podaj x punktu B: <input type="text" id="x2"></p>
+<p>Podaj y punktu B: <input type="text" id="y2"></p>
+<p>Podaj x punktu C: <input type="text" id="x3"></p>
+<p>Podaj y punktu C: <input type="text" id="y3"></p>
+<input type="button" value="Oblicz D1" onclick="AB_chyl()"><br><br>
+<input type="button" value="Oblicz D2" onclick="BC_chyl()"><br><br>
+<input type="button" value="Oblicz D3" onclick="AC_chyl()"><br><br>
+<script>
+function AB_chyl() {
+    var x1_chyl = parseFloat(document.getElementById("x1").value);
+    var y1_chyl = parseFloat(document.getElementById("y1").value);
+    var x2_chyl = parseFloat(document.getElementById("x2").value);
+    var y2_chyl = parseFloat(document.getElementById("y2").value);
+    var d1_chyl = Math.sqrt(Math.pow((x1_chyl - x2_chyl), 2) + Math.pow((y1_chyl - y2_chyl), 2));
+    document.write("D1 = "+ d1_chyl.toFixed(2));}
+function BC_chyl() {
+    var x2_chyl = parseFloat(document.getElementById("x2").value);
+    var y2_chyl = parseFloat(document.getElementById("y2").value);
+    var x3_chyl = parseFloat(document.getElementById("x3").value);
+    var y3_chyl = parseFloat(document.getElementById("y3").value);
+    var d2_chyl = Math.sqrt(Math.pow((x2_chyl - x3_chyl), 2) + Math.pow((y2_chyl - y3_chyl), 2));
+    document.write("D2 = "+ d2_chyl.toFixed(2));}
+function AC_chyl() {
+    var x1_chyl = parseFloat(document.getElementById("x1").value);
+    var y1_chyl = parseFloat(document.getElementById("y1").value);
+    var x3_chyl = parseFloat(document.getElementById("x3").value);
+    var y3_chyl = parseFloat(document.getElementById("y3").value);
+    var d3_chyl = Math.sqrt(Math.pow((x1_chyl - x3_chyl), 2) + Math.pow((y1_chyl - y3_chyl), 2));
+    document.write("D3 = "+ d3_chyl.toFixed(2));}
+</script>
+</body>
+</html>
