@@ -14,20 +14,23 @@
     <body>
         <p></p>
         <script>
+
+            //Szymon Chylińśki 2P
             let No = parseFloat(prompt("Podaj ilość początkową atomów No:"));
             let t = parseFloat(prompt("Podaj czas (w latach):"));
             let T_polowiczny = parseFloat(prompt("Podaj okres połowicznego zaniku T1/2 (w latach):"));
 
             let lambda = Math.log(2) / T_polowiczny;
             let N = No * Math.pow(Math.E, -lambda * t);
-
+            
             document.write("N0=" + No.toFixed(0) + "[sztuk]<br>");
             document.write("t=" + t.toFixed(0) + "[lat]<br>");
             document.write("T1/2=" + T_polowiczny.toFixed(0) + "[lat]<br>");
             document.write("Lambda=" + lambda.toFixed(7) + "[1/rok] <br>");
             document.write("N=" + N.toFixed(7) + "[sztuk]");
-            //Szymon Chyliński 2P
+            
         </script>
     </body>
 
 </html>
+
