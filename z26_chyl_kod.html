@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Zadanie 26 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 26 kod: </h1>
+        <textarea readonly rows="32" cols="100"><!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 26</title>
+</head>
+<body>
+
+<form onsubmit="Pow_chylinski(); Obw_chylinski(); return false">
+
+    Górna podstawa=<input type="text" id="gora" size="4"><br><br>
+    Dolna podstawa=<input type="text" id="dol" size="4"><br><br>
+    Wysokość=<input type="text" id="wysokosc" size="4"><br><br>
+    <input type="submit" value="oblicz"><br><br>
+
+    pole=<input type="text" readonly id="pole" size="6"><br>
+    obwód=<input type="text" readonly id="obwod" size="6"><br>
+</form>
+
+<script>
+function Pow_chylinski() {
+    let a = parseFloat(document.getElementById("gora").value);
+    let b = parseFloat(document.getElementById("dol").value);
+    let h = parseFloat(document.getElementById("wysokosc").value);
+    if (isNaN(a) || isNaN(b) || isNaN(h)) return;
+    document.getElementById("pole").value = (((a + b) * h) / 2).toFixed(2);
+}
+
+function Obw_chylinski() {
+    let a = parseFloat(document.getElementById("gora").value);
+    let b = parseFloat(document.getElementById("dol").value);
+    let h = parseFloat(document.getElementById("wysokosc").value);
+    if (isNaN(a) || isNaN(b) || isNaN(h)) return;
+    let r = Math.abs(a - b) / 2; 
+    let ramie = Math.sqrt(Math.pow(r, 2) + Math.pow(h, 2));
+    document.getElementById("obwod").value = (a + b + 2 * ramie).toFixed(2);
+}
+</script>
+</body>
+</html></textarea>
+        </center>
+    </body>
+</html>

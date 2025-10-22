@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 27</title>
+</head>
+<body>
+
+<form onsubmit="oblicz(); return false;">
+  Odległość Artura od Dawida: <input type="text" id="odl_chyl" size="4"><br>
+  Droga przebyta przez samolot nad Dawidem: <input type="text" id="s_chyl" size="4"><br><br>
+  <input type="submit" value="oblicz"><br><br>
+  Wysokość = <input type="text" readonly id="wysokosc" size="6"><br>
+  Kąt = <input type="text" readonly id="kat" size="6"><br>
+</form>
+
+<script>
+function oblicz() {
+    let odl_chyl = parseFloat(document.getElementById("odl_chyl").value);
+    let s_chyl = parseFloat(document.getElementById("s_chyl").value);
+
+    if (isNaN(odl_chyl) || isNaN(s_chyl) || s_chyl <= odl_chyl) {
+      alert("Podaj poprawne dane (s > odl).");
+      return;
+    }
+
+    let kat = Kat(s_chyl, odl_chyl);
+    let h = Wys(s_chyl, kat);
+
+    document.getElementById("kat").value = kat.toFixed(2);
+    document.getElementById("wysokosc").value = h.toFixed(2);
+    }
+
+    function Kat(s_chyl, odl_chyl) {
+      return Math.asin(odl_chyl / s_chyl) * 180 / Math.PI;
+    }
+
+    function Wys(s_chyl, kat) {
+      return s_chyl * Math.sin(kat * Math.PI / 180);
+    }
+</script>
+</body>
+</html>
