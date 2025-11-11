@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Zadanie 31</title>
+        <script type="text/javascript">
+            var pudelko = {
+            kolor: 'beżowy',
+            wiek: '1 rok',
+            waga: '1kg',
+            wzrost: '20cm',
+            pokaz: function () {
+                document.write(this.kolor + ", " + this.wiek + ", "  + this.waga + ", " + this.wzrost) 
+                }
+            }
+            pudelko.pokaz(); 
+            pudelko.waga=1;
+            pudelko.napisz = function() {alert('waga pudelka to: ' + this.waga + 'm')}
+            pudelko.napisz();
+        </script> 
+    </head> 
+<body> 
+<br> 
+    <p>Programowanie obiektowe <br> 
+        Obiekt to pudelko <br> 
+        Pola: kolor, wiek, waga<br> 
+        Kolor: beżowy<br> 
+        Wiek: 1rok<br> 
+        Waga: 1kg<br>
+        Wzrost: 20cm<br> 
+        Metoda: pokaz()<br>
+        nowe pole to wzrost<br>
+        nowa metoda to napisz();<br>
+    </p>
+</body> 
+</html>

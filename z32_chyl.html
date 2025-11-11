@@ -1,0 +1,32 @@
+<html> 
+  <head> 
+    <script type="text/javascript"> 
+      function pudelko(wiek_k, waga_k, kolor_k, wielkosc_k) // początek konstruktora 
+      { 
+        this.wiek = wiek_k; 
+        this.waga = waga_k; 
+        this.kolor = kolor_k;
+        this.wielkosc = wielkosc_k;   
+      } // koniec konstruktora 
+
+      pudelko.prototype.wypisz = function () // definicja metody 
+      { 
+        alert(this.wiek + ' ' + this.waga + ' ' + this.kolor + ' ' + this.wielkosc); 
+      }; 
+
+      var pudelko1 = new pudelko("2 lata", "0.5 kg", "szary", "20 cm"); // nowy obiekt pudelko1 
+      var pudelko2 = new pudelko("1 rok", "0.25 kg", "czarny", "15 cm"); 
+
+      pudelko1.wypisz(); // uruchomienie metody wypisz() dotyczącej pudelko1 
+      pudelko2.wypisz(); 
+
+      document.write("dostęp do właściwości" + "<br>"); 
+      // poniżej dostęp do pól pudelko1 
+      document.write("pudełko pierwsze: " + pudelko1.wiek + " " + pudelko1.waga + " " + pudelko1.kolor + " " + pudelko1.wielkosc); 
+    </script> 
+  </head> 
+  <body> 
+    <br> 
+    programowanie obiektowe
+  </body> 
+</html>
