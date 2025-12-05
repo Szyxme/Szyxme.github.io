@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Zadanie 36 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 36 kod: </h1>
+        <textarea readonly rows="32" cols="100"><!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 39</title>
+</head>
+<body>
+<h2 style="color:green;">MENU</h2>
+<p style="color:red; font-size:20px;">1 - CZERWONY</p>
+<p style="color:blue; font-size:20px;">2 - NIEBIESKI</p>
+
+<input type="button" value="Oblicz" onclick="fun_chy()" />
+
+<script>
+function fun_chy() {
+    var opc_chy = prompt("Podaj kolor (1/2 lub nazwa)", "");
+    if(opc_chy == null) return;
+    opc_chy = opc_chy.toLowerCase();
+
+    if(opc_chy == "1" || opc_chy == "czerwony") {
+        document.write('<h1 style="color:red; font-size:40px;">wczytałeś kolor czerwony</h1>');
+    }
+    else if(opc_chy == "2" || opc_chy == "niebieski") {
+        document.write('<h6 style="color:blue; font-size:12px;">wczytałeś kolor niebieski</h6>');
+    }
+    else {
+        document.write('<h3 style="color:gray;">Nie rozpoznano koloru</h3>');
+    }
+}
+</script>
+
+</body>
+</html></textarea>
+        </center>
+    </body>
+</html>
