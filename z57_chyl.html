@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 57 - Chyliński</title>
+</head>
+<body>
+
+<script>
+
+
+let nd = 4;
+let koniec = nd + 15;
+
+let licznik = 0;
+
+for (let i = nd; i <= koniec; i++) {
+
+    let pierw2 = Math.sqrt(i);
+    let pierw4 = Math.sqrt(pierw2);
+
+    document.write(
+        "I=" + i +
+        " pierw_2(" + i + ")=" + pierw2.toFixed(2) +
+        " pierw_4(" + i + ")=" + pierw4.toFixed(2) +
+        "<br>"
+    );
+
+    licznik++;
+
+
+    if (licznik === 3) {
+        document.write("<br>--- Naciśnij F5 aby kontynuować ---<br><br>");
+        licznik = 0;
+    }
+}
+</script>
+
+</body>
+</html>

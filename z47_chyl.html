@@ -1,0 +1,45 @@
+<!DOCTYPE html>   
+<head>    
+<title> Chyliński 2P - Zadanie 47 </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color: red;font-size: 40px;">
+<script language="JavaScript">
+
+    var a_chy, b_chy, c_chy;
+
+    do {
+        var liczba1 = prompt("Podaj bok a:", ""); 
+        a_chy = parseFloat(liczba1);
+
+        var liczba2 = prompt("Podaj bok b:", ""); 
+        b_chy = parseFloat(liczba2);
+
+        var liczba3 = prompt("Podaj bok c:", ""); 
+        c_chy = parseFloat(liczba3);
+
+
+        var poprawne_dane =
+            (a_chy > 0) &&
+            (b_chy > 0) &&
+            (c_chy > 0) &&
+            (a_chy + b_chy > c_chy) &&
+            (a_chy + c_chy > b_chy) &&
+            (b_chy + c_chy > a_chy);
+
+        if (!poprawne_dane) {
+            alert("Z podanych boków NIE da się zbudować trójkąta.\nPodaj boki ponownie.");
+        }
+
+    } while (!poprawne_dane);
+
+    document.write("Podane boki tworzą trójkąt:<br>");
+    document.write("a = " + a_chy + "<br>");
+    document.write("b = " + b_chy + "<br>");
+    document.write("c = " + c_chy + "<br>");
+
+</script>
+</div>
+</body> 
+</html>
