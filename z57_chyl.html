@@ -1,39 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Zadanie 57 - Chyliński</title>
 </head>
 <body>
+<div style="color: red; font-size: 25px;">
+<script language="JavaScript">
 
-<script>
+var nr = 4; 
+var koniec = nr + 15; 
+var licznik = 0;
 
+for(var i = nr; i <= koniec; i++){
+    var pierw_2 = Math.sqrt(i).toFixed(2);
+    var pierw_4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
 
-let nd = 4;
-let koniec = nd + 15;
-
-let licznik = 0;
-
-for (let i = nd; i <= koniec; i++) {
-
-    let pierw2 = Math.sqrt(i);
-    let pierw4 = Math.sqrt(pierw2);
-
-    document.write(
-        "I=" + i +
-        " pierw_2(" + i + ")=" + pierw2.toFixed(2) +
-        " pierw_4(" + i + ")=" + pierw4.toFixed(2) +
-        "<br>"
-    );
-
+    document.write("I=" + i + " pierw_2(" + i + ")=" + pierw_2 + " pierw_4(" + i + ")=" + pierw_4 + "<br>");
+    
     licznik++;
-
-
-    if (licznik === 3) {
-        document.write("<br>--- Naciśnij F5 aby kontynuować ---<br><br>");
-        licznik = 0;
+    if(licznik % 3 === 0){
+        alert("Kliknij OK");
     }
 }
-</script>
 
+</script>
+</div>
 </body>
 </html>
