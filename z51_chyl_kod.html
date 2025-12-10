@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Zadanie 51 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 51 kod: </h1>
+        <textarea readonly rows="33" cols="81">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 51</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var ile_razy_chy = prompt("Ile razy powtórzyć napis?");
+        var ile_razy_chy = parseInt(ile_razy_chy);
+        
+        var inicjaly_chy = prompt("Podaj Twoje inicjały:");
+        
+        for (var i_chy = 1; i_chy <= ile_razy_chy; i_chy++) {
+            for (var k_chy = 1; k_chy <= i_chy; k_chy++) {
+                document.write("&nbsp;");
+            }
+            document.write(i_chy + "_" + inicjaly_chy + "_" + i_chy + "<br>");
+        }
+    </script>
+</body>
+</html>
+</textarea>
+        </center>
+    </body>
+</html>
